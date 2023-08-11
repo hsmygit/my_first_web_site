@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            let coworkers = {
+               "programmer" : "egoing",
+               "designer" : "leezche" 
+            }; //오브젝트 리터럴
+            document.write("programmer : " + coworkers.programmer + "<br>");
+            document.write("programmer : " + coworkers.designer + "<br>");
+            coworkers.bookkeeper = "duru"; //정보 추가.
+            document.write("bookkeeper: " + coworkers.bookkeeper +"<br>");
+            coworkers["data scientist"] = "taeho"; 
+            //  문법 적으로 이름에는 띄어쓰기를 못 쓴다 하지만 배열에서 정보를 가져올 때 
+            //  쓰는 []를 이용하여 문자열에 띄어쓰기를 넣을 수 있다.
+            document.write("data scientist : " + coworkers["data scientist"] + "<br>");
+        </script>
+        <h2>Iterate(순회)</h2>
+        <script>
+            for(let key in coworkers){
+                document.write(key +" : " + coworkers[key]+'<br>');
+            }
+        </script>
+        <h2>Property & Method</h2>
+        <script>
+            coworkers.showAll = function(){
+                for(let key in this){
+                    if(key != "showAll"){
+                        document.write(key +" : " + this[key]+'<br>');
+                    }
+            }// showAll 조차 coworkers에 소속된 데이터 이기 때문에 화면에 코드가 표시된다.
+            }
+            coworkers.showAll();
+            //실제로 함수를 정의 할 때 이런식의 표현이 가능하다.
+            // let showAll = function(){
+
+            // }
+
+            // function showAll(){
+
+            // }
+        </script>
+    </body>
+</html>

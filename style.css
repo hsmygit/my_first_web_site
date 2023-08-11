@@ -19,6 +19,9 @@ h1 {
     border-bottom:1px solid gray;
     padding: 20px;
 }
+#home a{
+    color: aqua;
+}
 
 #grid {
     display: grid;
@@ -32,6 +35,18 @@ h1 {
     padding-top: 16px;
     width: 100px;
 }
+#grid ul{
+    border-right:1px solid gray;
+    margin: 0;
+    padding-left:40px;
+    padding-top: 16px;
+    width: 100px;
+    text-decoration: underline;
+}
+#grid ul a{
+    color: aqua;
+}
+
 
 #grid #article{
     padding-left: 23px;
@@ -40,7 +55,7 @@ h1 {
     #grid{
         display: block; /*block level elment가 된다*/
     }
-    #grid ol{
+    #grid ol, #grid ul{
         border-right:none;/*선 삭제*/
     }
     h1{
